@@ -119,6 +119,9 @@ body, html {
   cursor: pointer;
 }
 
+
+
+
 .bottom-logo{
   position: absolute;
   overflow: hidden;
@@ -181,10 +184,14 @@ body, html {
 }
 
 .text-strip-2{
-  background-color: black;  
-  position: fixed;
-  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: black;
   padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
 }
 
 .message
@@ -193,13 +200,11 @@ body, html {
     color: white;
     width: 100%; 
     overflow: hidden; 
-    white-space: nowrap; 
-    
+    white-space: nowrap;  
 }
 
 .message span{
   display: inline-block;
-  
   animation: scroll-left 10s linear infinite; 
 }
 
@@ -213,13 +218,11 @@ body, html {
   width: 100%;
   height: 20%;
   display: block;
-
 }
 
 .arrow-1,
 .arrow-2,
 .arrow-3{
-    
     position: absolute;
     left:47%;
     height: 7%;
@@ -228,16 +231,13 @@ body, html {
     bottom: 92%;
     animation: fadeGlow1 3s infinite alternate;
     transform: translateY(0);
-    
 }
 
 .frame-1,
 .frame-2{
   position: relative;
   transition: opacity 0.5s;
-  
 }
-
 
 .frame-1{
     position: absolute; 
@@ -246,9 +246,51 @@ body, html {
     z-index: index 1;
     top: 8%;
     transform: translate(-50%, -50%);  
-    
     animation: upDown 2s infinite ease-in-out;
 
 }
 
- 
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  
+}
+
+.product {
+  width: 150px;
+  height: 350px;
+  background: #fff;
+  border-radius: 130px 130px 20px 20px;
+  box-shadow: 4px 4px 6px rgba(0.1, 0.1, 0.1, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  text-align: center;
+}
+
+.product img {
+  width: 150px;
+  border-radius: 150px 150px 0px 0px; 
+  height: 270px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product .name {
+  font-size: 14px;
+  font-family: sans-serif;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product .price {
+  font-size: 12px;
+  text-align: left;
+  color: #858383;
+}
